@@ -46,14 +46,14 @@ function afficherMessage(token) {
     .then((reponse) => reponse.json())
     .then((form) => {
       console.log(form);
-      form.forEach((message) => {
-        testUn = `<div>
-            <hr>
-                <h2> Message : ${message.test}</h2>
-    </div>
-`;
-        contenu.innerHTML += testUn;
-      });
+      // form.forEach((message) => {
+      //   //         testUn = `<div>
+      //   //             <hr>
+      //   //                 <h2> Message : ${message.test}</h2>
+      //   //     </div>
+      //   // `;
+      //   //         contenu.innerHTML += testUn;
+      // });
     });
   //   if (username && password) {
   //     return urlGood;
