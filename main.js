@@ -33,7 +33,7 @@ function envoiUser(username, password) {
 
 function afficherMessage(token) {
   contenu.innerHTML = "";
-  let urlGood = "https://quiet-dusk-76059.herokuapp.com/api/trucs";
+  let urlGood = "https://quiet-dusk-76059.herokuapp.com/api/gateau";
 
   let requete = {
     method: "GET",
@@ -44,16 +44,17 @@ function afficherMessage(token) {
   };
   fetch(urlGood, requete)
     .then((reponse) => reponse.json())
-    .then((form) => {
+    .then((messageServeur) => {
       console.log(form);
-      // form.forEach((message) => {
-      //   //         testUn = `<div>
-      //   //             <hr>
-      //   //                 <h2> Message : ${message.test}</h2>
-      //   //     </div>
-      //   // `;
-      //   //         contenu.innerHTML += testUn;
-      // });
+      messageServeur.forEach((gateau) => {
+        testUn = `<div>
+                    <hr>
+                        <h2> Message : ${gateau.name}</h2>
+                    <hr>
+            </div>
+        `;
+        contenu.innerHTML += testUn;
+      });
     });
   //   if (username && password) {
   //     return urlGood;
