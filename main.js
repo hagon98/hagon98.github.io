@@ -33,7 +33,7 @@ function envoiUser(username, password) {
 
 function afficherMessage(token) {
   contenu.innerHTML = "";
-  let urlGood = "https://quiet-dusk-76059.herokuapp.com/api/";
+  let urlGood = "https://quiet-dusk-76059.herokuapp.com/api/trucs";
 
   let requete = {
     method: "GET",
