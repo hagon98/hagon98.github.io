@@ -45,7 +45,7 @@ function afficherMessage(token) {
   fetch(urlGood, requete)
     .then((reponse) => reponse.json())
     .then((messageServeur) => {
-      console.log(form);
+      console.log(messageServeur);
       messageServeur.forEach((gateau) => {
         testUn = `<div>
                     <hr>
